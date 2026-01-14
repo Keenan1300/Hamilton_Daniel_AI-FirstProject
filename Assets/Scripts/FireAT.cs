@@ -1,12 +1,14 @@
 using NodeCanvas.Framework;
-using UnityEngine;
 using ParadoxNotion.Design;
+using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
 	public class FireAT : ActionTask {
 
+		public GameObject target;
         public Material Fire;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -18,7 +20,10 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			EndAction(true);
+            Renderer renderer = agent.gameObject.GetComponent<Renderer>();
+            renderer.material = Fire;
+
+            EndAction(true);
 		}
 
 		//Called once per frame while the action is active.

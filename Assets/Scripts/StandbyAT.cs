@@ -22,8 +22,13 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnExecute() {
 
             Renderer renderer = agent.gameObject.GetComponent<Renderer>();
-            //renderer.material = ;
-            agent.transform.position += Vector3.right;
+            renderer.material = Standby;
+            Vector3 rot = agent.transform.eulerAngles;
+			rot.z += 5f * Time.deltaTime;
+
+
+            agent.transform.eulerAngles = rot;
+
             agent.GetComponent<Rigidbody>();
 
             //end action stops behaviours

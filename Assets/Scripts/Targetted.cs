@@ -1,16 +1,14 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-using UnityEngine;
-using UnityEngine.UIElements;
+
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class TargetAT : ActionTask {
+	public class Targetted : ActionTask {
 
-        public Material Target;
-        //Use for initialization. This is called only once in the lifetime of the task.
-        //Return null if init was successfull. Return an error string otherwise
-        protected override string OnInit() {
+		//Use for initialization. This is called only once in the lifetime of the task.
+		//Return null if init was successfull. Return an error string otherwise
+		protected override string OnInit() {
 			return null;
 		}
 
@@ -18,9 +16,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-            Renderer renderer = agent.gameObject.GetComponent<Renderer>();
-            renderer.material = Target;
-            EndAction(true);
+			EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
