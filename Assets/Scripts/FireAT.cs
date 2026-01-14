@@ -1,4 +1,5 @@
 using NodeCanvas.Framework;
+using UnityEngine;
 using ParadoxNotion.Design;
 
 
@@ -6,9 +7,10 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class FireAT : ActionTask {
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        public Material Fire;
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
 			return null;
 		}
 
