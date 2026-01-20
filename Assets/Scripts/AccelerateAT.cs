@@ -1,13 +1,16 @@
 using NodeCanvas.Framework;
-using UnityEngine;
 using ParadoxNotion.Design;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class DisableAT : ActionTask {
+	public class AccelerateAT : ActionTask {
 
-		
+		public BBParameter<GameObject> otherobject;
+		public float amounttoacclerate;
+
+
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {
@@ -19,16 +22,18 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-			//agent is vehicle to get access to game object content, translator for non-monobehaviour type of script like this
-			agent.gameObject.SetActive(false);
-			agent.transform.position += Vector3.right;
-			agent.GetComponent<Rigidbody>();
-			//end action stops behaviours
+			Blackboard otherblackboard = otherobject.value.GetComponent<Blackboard>();
+			float currentspeed = otherblackboard.GetVariableValue<float>("speed");
+            currentspeed += amounttoacclerate;
+			otherblackboard.SetVariableValue("speed", currentspeed);
+
+
 			EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			
 		}
 
 		//Called when the task is disabled.
