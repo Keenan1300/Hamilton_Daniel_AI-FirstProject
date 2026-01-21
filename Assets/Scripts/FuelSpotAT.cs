@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-    public class RefillFuel : ActionTask {
+	public class FuelSpotAT : ActionTask {
 
-        public float FuelPumprate;
-        public BBParameter<float> Fuellevel;
-        
-		//Use for initialization. This is called only once in the lifetime of the task.
+        public Transform targetTransform;
+        public BBParameter<float> speed;
+
+        //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
 			return null;
@@ -25,15 +25,17 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			if (Fuellevel.value < 100f)
-			{
-				Fuellevel.value += FuelPumprate;
-			}
-			else
-			{
+            //move obj towards target
+            Vector3 directiontoMove = targetTransform.position - agent.transform.position;
+
+            agent.transform.position += directiontoMove.normalized * speed.value * Time.deltaTime;
+
+            float distancetoTarget = directiontoMove.magnitude;
+            if (distancetoTarget < 0.2f)
+            {
                 EndAction(true);
             }
-		}
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {

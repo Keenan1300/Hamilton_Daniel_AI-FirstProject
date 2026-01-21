@@ -9,6 +9,8 @@ namespace NodeCanvas.Tasks.Actions {
 
         public Transform targetTransform;
         public BBParameter<float> speed;
+        public BBParameter<float> FuelLevel;
+        public BBParameter<float> rateoffeulloss;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -28,12 +30,16 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-            
-			//move obj towards target
+
+            //consume fuel as you move
+            FuelLevel.value -= speed.value / rateoffeulloss.value * Time.deltaTime;
+
+            //move obj towards target
             Vector3 directiontoMove = targetTransform.position - agent.transform.position;
 
             agent.transform.position += directiontoMove.normalized * speed.value * Time.deltaTime;
 
+            //if target is close enough end task
             float distancetoTarget = directiontoMove.magnitude;
             if (distancetoTarget < 0.5f)
             {
