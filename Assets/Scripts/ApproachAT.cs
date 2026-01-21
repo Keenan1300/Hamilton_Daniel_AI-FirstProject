@@ -6,53 +6,48 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class ApproachAT : ActionTask {
 
-		public Transform targetTransform;
-		public BBParameter<float> speed;
-		//anywhere that acceses BBparameter must have the suffix of .value at its end
+        public BBParameter<Transform> targetTransform;
+        public float speed;
+        public float arriveThreshold;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
-        protected override string OnInit() {
+        protected override string OnInit()
+        {
+            return null;
+        }
 
-			//Blackboard blackb = agent.GetComponent<Blackboard>();
-			//speed = blackb.GetVariableValue<float>("speed");
+        //This is called once each time the task is enabled.
+        //Call EndAction() to mark the action as finished, either in success or failure.
+        //EndAction can be called from anywhere.
+        protected override void OnExecute()
+        {
+        }
 
-			//blackb.SetVariableValue("speed",0f);
+        //Called once per frame while the action is active.
+        protected override void OnUpdate()
+        {
+            //Move towards the targetTransform
+            agent.transform.position += (targetTransform.value.position - agent.transform.position).normalized * speed * Time.deltaTime;
+            float distanceToTarget = Vector3.Distance(targetTransform.value.position, agent.transform.position);
+            if (distanceToTarget < arriveThreshold)
+            {
+                EndAction(true);
+            }
 
-			return null;
-		}
 
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
-			
-			
-			//EndAction(true);
-		}
+        }
 
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
-			//move obj towards target
-			Vector3 directiontoMove = targetTransform.position - agent.transform.position;
-			
-			agent.transform.position += directiontoMove.normalized * speed.value * Time.deltaTime;
-			
-			float distancetoTarget = directiontoMove.magnitude;
-			if(distancetoTarget < 0.5f)
-			{
-				EndAction(true);
-			}
-		}
+        //Called when the task is disabled.
+        protected override void OnStop()
+        {
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
+        }
 
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
-	}
+        //Called when the task is paused.
+        protected override void OnPause()
+        {
+
+        }
+    }
 }

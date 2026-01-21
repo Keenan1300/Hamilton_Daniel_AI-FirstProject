@@ -5,13 +5,12 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class FuelSpotAT : ActionTask {
+	public class RepairAT : ActionTask {
 
-        public Transform targetTransform;
-        public BBParameter<float> speed;
-        public BBParameter<float> FuelLevel;
-        public BBParameter<float> rateoffeulloss;
+        public BBParameter<Transform> workpadTransform;
+        public float rateofChange;
 
+		private Blackboard Lighthouseblackboard;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -23,26 +22,22 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			
+			Lighthouseblackboard = workpadTransform.value.GetComponentInParent<Blackboard>();
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			float repairvalue = Lighthouseblackboard.GetVariableValue<float>("repairValue");
+			repairvalue += rateofChange * Time.deltaTime;
+			Lighthouseblackboard.SetVariableValue("repairValue",repairvalue);
 
-            //consume fuel as you move
-            FuelLevel.value -= speed.value / rateoffeulloss.value * Time.deltaTime;
+			float repairThreshold = Lighthouseblackboard.GetVariableValue<float>("activethreshold");
 
-            //move obj towards target
-            Vector3 directiontoMove = targetTransform.position - agent.transform.position;
-
-            agent.transform.position += directiontoMove.normalized * speed.value * Time.deltaTime;
-
-            float distancetoTarget = directiontoMove.magnitude;
-            if (distancetoTarget < 0.2f)
-            {
-                EndAction(true);
-            }
-        }
+			if (repairThreshold < repairvalue)
+			{
+				EndAction(true);
+			}
+		}
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
