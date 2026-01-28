@@ -1,52 +1,52 @@
-using JetBrains.Annotations;
 using NodeCanvas.Framework;
-using NUnit.Framework;
 using ParadoxNotion.Design;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 
-namespace NodeCanvas.Tasks.Actions {
+namespace NodeCanvas.Tasks.Actions
+{
 
-	public class GreenlightAT : ActionTask {
+    public class PowerOFFAT : ActionTask
+    {
 
-        public BBParameter<GameObject> car;
-        public BBParameter<GameObject> manager;
         public BBParameter<int> Index;
-        public BBParameter<float> Acceleration;
+        public BBParameter<GameObject> car;
+        public BBParameter<float> decelerationrate;
         public BBParameter<List<GameObject>> Trafficlights;
+
+
+        //swapsign to yellow for yield
+        public Renderer Renderer;
+        public Material OFF;
 
         public BBParameter<float> Trafficradius;
         public LayerMask carmask;
 
-
-        //swapsign to Green for go
-        public Renderer Renderer;
-        public Material Greenlight;
-
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
-        protected override string OnInit() {
-
-
+        protected override string OnInit()
+        {
             return null;
-		}
+        }
 
         //This is called once each time the task is enabled.
         //Call EndAction() to mark the action as finished, either in success or failure.
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
-           
 
+
+
+
+            //Change the material of the selected traffic light
             int i = Index.value;
 
             // Change material of selected traffic light
             GameObject selectedTrafficLight = Trafficlights.value[i];
             Renderer renderer = selectedTrafficLight.GetComponent<Renderer>();
-            renderer.material = Greenlight;
-
+            renderer.material = OFF;
 
             //Check if car is within range of the traffic light
             Collider[] carsinrange = Physics.OverlapSphere(selectedTrafficLight.transform.position, Trafficradius.value, carmask);
@@ -54,12 +54,11 @@ namespace NodeCanvas.Tasks.Actions {
             {
                 Blackboard carblackboard = objectinrange.gameObject.GetComponentInParent<Blackboard>();
 
-                // Access car speed
-                Blackboard carBlackboard = car.value.GetComponent<Blackboard>();
-                float currentSpeed = carBlackboard.GetVariableValue<float>("Speed");
-                currentSpeed += Acceleration.value;
-                carBlackboard.SetVariableValue("Speed", currentSpeed);
-
+                //access car speed
+                Blackboard Carblackboard = car.value.GetComponent<Blackboard>();
+                float currentspeed = Carblackboard.GetVariableValue<float>("Speed");
+                currentspeed = 2;
+                Carblackboard.SetVariableValue("Speed", currentspeed);
 
 
                 if (carblackboard == null)
@@ -69,22 +68,26 @@ namespace NodeCanvas.Tasks.Actions {
 
 
             }
-                EndAction(true);
+
+            EndAction(true);
         }
 
         //Called once per frame while the action is active.
-        protected override void OnUpdate() {
-			
-		}
+        protected override void OnUpdate()
+        {
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
+        }
 
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
-	}
+        //Called when the task is disabled.
+        protected override void OnStop()
+        {
+
+        }
+
+        //Called when the task is paused.
+        protected override void OnPause()
+        {
+
+        }
+    }
 }

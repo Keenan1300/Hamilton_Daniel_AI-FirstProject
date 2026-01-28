@@ -18,10 +18,15 @@ namespace NodeCanvas.Tasks.Actions {
 		public Renderer Renderer;
 		public Material Redlight;
 
+        public BBParameter<float> Trafficradius;
+        public LayerMask carmask;
+
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
+
+	
 			return null;
 		}
 
@@ -30,22 +35,39 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-			//access car speed
-            Blackboard Carblackboard = car.value.GetComponent<Blackboard>();
-            float currentspeed = Carblackboard.GetVariableValue<float>("Speed");
-            currentspeed = 0;
-            Carblackboard.SetVariableValue("Speed", currentspeed);
+		
 
 
             //Change the material of the selected traffic light
-            List<GameObject> Trafficlights = agent.GetComponent<List<GameObject>>();
+            int i = Index.value;
 
-            //set selected list object material to redlight
-            GameObject SelectedTrafflight = Trafficlights[Index.value];
-            Renderer = SelectedTrafflight.GetComponent<Renderer>();
-            Renderer.material = Redlight;
+            // Change material of selected traffic light
+            GameObject selectedTrafficLight = Trafficlights.value[i];
+            Renderer renderer = selectedTrafficLight.GetComponent<Renderer>();
+            renderer.material = Redlight;
 
 
+
+            //Check if car is within range of the traffic light
+            Collider[] carsinrange = Physics.OverlapSphere(selectedTrafficLight.transform.position, Trafficradius.value, carmask);
+            foreach (Collider objectinrange in carsinrange)
+            {
+                Blackboard carblackboard = objectinrange.gameObject.GetComponentInParent<Blackboard>();
+
+                //access car speed
+                Blackboard Carblackboard = car.value.GetComponent<Blackboard>();
+                float currentspeed = Carblackboard.GetVariableValue<float>("Speed");
+                currentspeed = 0;
+                Carblackboard.SetVariableValue("Speed", currentspeed);
+
+
+                if (carblackboard == null)
+                {
+                    Debug.LogError("car is not in range");
+                }
+
+
+            }
 
             EndAction(true);
 		}

@@ -14,11 +14,17 @@ namespace NodeCanvas.Tasks.Actions {
         public float scanspeed = 5f;
         public float scanrangemax = 20f;
         public BBParameter<int> Index;
+        public BBParameter<int> Index2;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
-			return null;
+
+            Blackboard Trafblackboard = agent.GetComponent<Blackboard>();
+           
+
+
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -28,6 +34,7 @@ namespace NodeCanvas.Tasks.Actions {
 
             Blackboard Trafblackboard = agent.GetComponent<Blackboard>();
             Trafblackboard.SetVariableValue("IndexNum", Random.Range(0, 7));
+            Trafblackboard.SetVariableValue("IndexNum2", Random.Range(0, 7));
             EndAction(true);
         }
 
