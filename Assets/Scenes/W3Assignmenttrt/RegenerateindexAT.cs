@@ -7,8 +7,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class RegenerateindexAT : ActionTask {
 
-        public Color scanColour = new Color(255, 255, 255, 20);
-        public int numberOfScanCirclePoints;
+        
         public LayerMask targetmask;
         public GameObject objectsinrange;
         public float radius;
@@ -26,9 +25,11 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+
             Blackboard Trafblackboard = agent.GetComponent<Blackboard>();
-            Trafblackboard.SetVariableValue("Index", Random.Range(0, 9));
-		}
+            Trafblackboard.SetVariableValue("IndexNum", Random.Range(0, 7));
+            EndAction(true);
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {

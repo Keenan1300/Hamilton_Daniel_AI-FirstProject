@@ -14,7 +14,9 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> decelerationrate;
         public BBParameter<List<GameObject>> Trafficlights;
 
-        //swapsign to red for stop
+
+        //swapsign to yellow for yield
+        public Renderer Renderer;
         public Material Yellowlight;
 
         //Use for initialization. This is called only once in the lifetime of the task.

@@ -14,8 +14,9 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> decelerationrate;
         public BBParameter<List<GameObject>> Trafficlights;
 
-        //swapsign to red for stop
-        public Material Redlight;
+		//swapsign to red for stop
+		public Renderer Renderer;
+		public Material Redlight;
 
 
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -41,8 +42,8 @@ namespace NodeCanvas.Tasks.Actions {
 
             //set selected list object material to redlight
             GameObject SelectedTrafflight = Trafficlights[Index.value];
-            Renderer renderer = SelectedTrafflight.GetComponent<Renderer>();
-            renderer.material = Redlight;
+            Renderer = SelectedTrafflight.GetComponent<Renderer>();
+            Renderer.material = Redlight;
 
 
 
