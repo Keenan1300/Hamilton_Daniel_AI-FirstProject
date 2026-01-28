@@ -1,6 +1,8 @@
 using NodeCanvas.Framework;
+using NUnit.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 namespace NodeCanvas.Tasks.Actions {
@@ -8,6 +10,8 @@ namespace NodeCanvas.Tasks.Actions {
 	public class GreenlightAT : ActionTask {
 
         public BBParameter<GameObject> car;
+        public BBParameter<GameObject> TrafficManager;
+        public BBParameter<int> Index;
         public BBParameter<float> Acceleration;
 
         //swapsign to red for stop
@@ -16,7 +20,12 @@ namespace NodeCanvas.Tasks.Actions {
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
-			return null;
+
+            enemyobjects = TrafficManager
+            GameObject SelectedTrafficLight = TrafficManager.enemyObjects[Index];
+            
+
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -32,6 +41,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 
             //set self material to redlight
+
             Renderer renderer = agent.gameObject.GetComponent<Renderer>();
             renderer.material = Greenlight;
 
