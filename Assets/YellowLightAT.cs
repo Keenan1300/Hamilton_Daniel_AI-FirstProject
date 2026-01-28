@@ -54,7 +54,7 @@ namespace NodeCanvas.Tasks.Actions {
                 //access car speed
                 Blackboard Carblackboard = car.value.GetComponent<Blackboard>();
                 float currentspeed = Carblackboard.GetVariableValue<float>("Speed");
-                currentspeed = currentspeed / 5;
+                currentspeed = 2;
                 Carblackboard.SetVariableValue("Speed", currentspeed);
 
 

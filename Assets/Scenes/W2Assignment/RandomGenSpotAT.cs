@@ -11,6 +11,7 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> speed;
         public BBParameter<float> FuelLevel;
         public BBParameter<float> rateoffeulloss;
+        public bool random;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -24,7 +25,12 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-            targetTransform.position = new Vector3(Random.Range(-15f, 15f), -1.9f, Random.Range(-15f, 15f));
+            if (random)
+            {
+                targetTransform.position = new Vector3(Random.Range(30f, 13f), -0f, Random.Range(5f, -6f));
+            }
+
+
             //EndAction(true);
         }
 
