@@ -1,5 +1,7 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,9 +10,11 @@ namespace NodeCanvas.Tasks.Actions {
 	public class RedlightAT : ActionTask {
 
 		public BBParameter<GameObject> car;
+        public BBParameter<int> Index;
         public BBParameter<float> decelerationrate;
+        public BBParameter<List<GameObject>> Trafficlights;
 
-		//swapsign to red for stop
+        //swapsign to red for stop
         public Material Redlight;
 
 
@@ -32,11 +36,15 @@ namespace NodeCanvas.Tasks.Actions {
             Carblackboard.SetVariableValue("Speed", currentspeed);
 
 
-            //set self material to redlight
-            Renderer renderer = agent.gameObject.GetComponent<Renderer>();
-			renderer.material = Redlight;
+            //Change the material of the selected traffic light
+            List<GameObject> Trafficlights = agent.GetComponent<List<GameObject>>();
 
-			
+            //set selected list object material to redlight
+            GameObject SelectedTrafflight = Trafficlights[Index.value];
+            Renderer renderer = SelectedTrafflight.GetComponent<Renderer>();
+            renderer.material = Redlight;
+
+
 
             EndAction(true);
 		}

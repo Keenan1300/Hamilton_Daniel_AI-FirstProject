@@ -119,58 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &59762381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 59762382}
-  - component: {fileID: 59762383}
-  m_Layer: 0
-  m_Name: TrafficLightManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &59762382
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59762381}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7445443, y: -3.76, z: -2.6021414}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &59762383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59762381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79206184f165bfa4b9b37367de050cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyObjects:
-  - {fileID: 8889597721199672959}
-  - {fileID: 952381663}
-  - {fileID: 1600243164}
-  - {fileID: 1048516964}
-  - {fileID: 1367587738}
-  - {fileID: 1209251511}
-  - {fileID: 681131220}
 --- !u!1 &230620792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.RegenerateindexAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"RegenerateTrafficLight","_position":{"x":989.0131,"y":806.0046},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_position":{"x":758.7878,"y":662.1279},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_nestedFSM":{"_value":1},"_position":{"x":1220.133,"y":552.6915},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Acceleration":{"_value":5.0,"_name":"Acceleration","_id":"29631fbb-0f4d-4b6c-99d4-9891edb6684d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.RegenerateindexAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"RegenerateTrafficLight","_position":{"x":989.0131,"y":806.0046},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_position":{"x":1220.133,"y":552.6915},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_nestedFSM":{"_value":1},"_color":{"r":1.0,"g":0.8941177,"b":0.8823529,"a":1.0},"_position":{"x":882.8375,"y":636.6995},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"Acceleration":{"_value":5.0,"_name":"Acceleration","_id":"29631fbb-0f4d-4b6c-99d4-9891edb6684d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Deceleration":{"_value":5.0,"_name":"Deceleration","_id":"d19f0cc9-f578-4913-aaa9-8e809e897db5","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}}'
   _boundGraphObjectReferences:
@@ -1360,8 +1308,8 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -210, y: -400}
-    _zoomFactor: 0.9070033
+    _translation: {x: -555, y: -374}
+    _zoomFactor: 0.9370263
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -1584,15 +1532,12 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Deceleration":{"_value":5.0,"_name":"Deceleration","_id":"af7c3aec-8c33-4a2b-8d8b-05c999ae08a8","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Car":{"_value":1,"_name":"Car","_id":"3b84f82d-aead-48a1-8450-f0e4d06d75cf","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"IndexNum":{"_name":"IndexNum","_id":"daee414a-a062-4e21-9723-c7592e6e9040","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TrafficManager":{"_value":2,"_name":"TrafficManager","_id":"fdac0dee-f719-4425-b484-2257d5abe1bf","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"myList
-    (GameObject)":{"_value":[3,4,5,6,7,8,9],"_name":"myList (GameObject)","_id":"8c186681-dc7b-44db-8bb2-8451f5a2f939","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"TrafficLightManager":{"_value":[2,3,4,5,6,7,8],"_name":"TrafficLightManager","_id":"8c186681-dc7b-44db-8bb2-8451f5a2f939","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 6431195300840765958}
-  - {fileID: 59762381}
   - {fileID: 8889597721199672959}
   - {fileID: 952381663}
   - {fileID: 1600243164}
@@ -1615,12 +1560,7 @@ MonoBehaviour:
   - _json: '{"_name":"IndexNum","_id":"daee414a-a062-4e21-9723-c7592e6e9040","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":1,"_name":"TrafficManager","_id":"fdac0dee-f719-4425-b484-2257d5abe1bf","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
-    _references:
-    - {fileID: 0}
-    - {fileID: 59762381}
-  - _json: '{"_value":[1,2,3,4,5,6,7],"_name":"myList (GameObject)","_id":"8c186681-dc7b-44db-8bb2-8451f5a2f939","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+  - _json: '{"_value":[1,2,3,4,5,6,7],"_name":"TrafficLightManager","_id":"8c186681-dc7b-44db-8bb2-8451f5a2f939","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references:
@@ -1773,7 +1713,6 @@ SceneRoots:
   - {fileID: 432351404}
   - {fileID: 961721722}
   - {fileID: 986813848}
-  - {fileID: 59762382}
   - {fileID: 8889597721199672958}
   - {fileID: 952381662}
   - {fileID: 1600243163}

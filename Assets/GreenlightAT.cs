@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using NodeCanvas.Framework;
 using NUnit.Framework;
 using ParadoxNotion.Design;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,9 +12,9 @@ namespace NodeCanvas.Tasks.Actions {
 	public class GreenlightAT : ActionTask {
 
         public BBParameter<GameObject> car;
-        public BBParameter<GameObject> TrafficManager;
         public BBParameter<int> Index;
         public BBParameter<float> Acceleration;
+        public BBParameter<List<GameObject>> Trafficlights;
 
         //swapsign to red for stop
         public Material Greenlight;
@@ -21,8 +23,7 @@ namespace NodeCanvas.Tasks.Actions {
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
 
-            enemyobjects = TrafficManager
-            GameObject SelectedTrafficLight = TrafficManager.enemyObjects[Index];
+        
             
 
             return null;
@@ -32,7 +33,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-
+            
+            
             //access car speed
             Blackboard Carblackboard = car.value.GetComponent<Blackboard>();
             float currentspeed = Carblackboard.GetVariableValue<float>("Speed");
@@ -40,9 +42,12 @@ namespace NodeCanvas.Tasks.Actions {
             Carblackboard.SetVariableValue("Speed", currentspeed);
 
 
-            //set self material to redlight
-
-            Renderer renderer = agent.gameObject.GetComponent<Renderer>();
+            //Change the material of the selected traffic light
+            List<GameObject> Trafficlights = agent.GetComponent<List<GameObject>>();
+            
+            //set selected list object material to redlight
+            GameObject SelectedTrafflight = Trafficlights[Index.value];
+            Renderer renderer = SelectedTrafflight.GetComponent<Renderer>();
             renderer.material = Greenlight;
 
             EndAction(true);

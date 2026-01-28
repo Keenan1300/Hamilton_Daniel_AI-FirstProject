@@ -14,7 +14,7 @@ namespace NodeCanvas.Tasks.Actions {
         public float radius;
         public float scanspeed = 5f;
         public float scanrangemax = 20f;
-		public int ObjectIndex;
+        public BBParameter<int> Index;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -26,7 +26,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			ObjectIndex = Random.Range(0,9);
+            Blackboard Trafblackboard = agent.GetComponent<Blackboard>();
+            Trafblackboard.SetVariableValue("Index", Random.Range(0, 9));
 		}
 
 		//Called once per frame while the action is active.
