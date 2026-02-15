@@ -530,7 +530,7 @@ MonoBehaviour:
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"SleepMeter":{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueRate":{"_value":1.2,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueThreshold":{"_value":10.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueThreshold":{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GoldPile":{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Radius":{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IdleTime":{"_value":3.0,"_name":"IdleTime","_id":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -552,7 +552,7 @@ MonoBehaviour:
   - _json: '{"_value":1.2,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":10.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
