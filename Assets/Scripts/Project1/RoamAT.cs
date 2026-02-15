@@ -49,6 +49,8 @@ namespace NodeCanvas.Tasks.Actions {
             if (NavMesh.SamplePosition(destination, out hit, 10f, NavMesh.AllAreas))
             {
                 navAgent.SetDestination(hit.position);
+
+
             }
 
         }

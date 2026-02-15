@@ -12,6 +12,8 @@ namespace NodeCanvas.Tasks.Actions {
 
         public BBParameter<Transform> sleepspot;
         public BBParameter<float> IdleTime;
+        public BBParameter<float> Sleepmeter;
+        public float SleepRefillRate;
         private NavMeshAgent navAgent;
 
 
@@ -40,14 +42,21 @@ namespace NodeCanvas.Tasks.Actions {
             
             navAgent.SetDestination(Sleeppoint);
             
-
         }
 
 
         //Called once per frame while the action is active.
         protected override void OnUpdate() {
-			
-		}
+
+            if (navAgent.remainingDistance < 0.7f &&
+             !navAgent.pathPending)
+            {
+                SetDestination();
+                Sleepmeter.value += SleepRefillRate;
+
+            }
+
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
