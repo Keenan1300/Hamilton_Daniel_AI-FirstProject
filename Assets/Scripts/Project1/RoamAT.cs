@@ -6,21 +6,23 @@ using System.Collections.Generic;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
 
+
 namespace NodeCanvas.Tasks.Actions {
 
-	public class WanderAT : ActionTask {
+	public class RoamAT : ActionTask {
 
+		public BBParameter<float> IdleTime;
+        private NavMeshAgent navAgent;
 
-		public float wanderRadius;
-		public float wandercircledistance;
+        //roam example
+        public float wanderRadius;
+        public float wandercircledistance;
 
-		private NavMeshAgent navAgent;
-
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
-			navAgent = agent.GetComponent<NavMeshAgent>();
-			return null;
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
+            navAgent = agent.GetComponent<NavMeshAgent>();
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -28,12 +30,12 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-			SetDestination();
 
-		}
+            SetDestination();
+        }
 
-		private void SetDestination()
-		{
+        private void SetDestination()
+        {
             Vector3 circlecenter = agent.transform.position + agent.transform.forward * wandercircledistance;
             Vector3 randompoint = Random.insideUnitCircle.normalized * wanderRadius;
             Vector3 destination = circlecenter + new Vector3(randompoint.x, agent.transform.position.y, randompoint.y);
@@ -50,6 +52,7 @@ namespace NodeCanvas.Tasks.Actions {
             }
 
         }
+
 
 
         private void VisualizeWander(Vector3 currentCircleCenter, Vector3 currentDestination, float pathUpdateFrequency)
@@ -69,13 +72,11 @@ namespace NodeCanvas.Tasks.Actions {
 
         //Called once per frame while the action is active.
         protected override void OnUpdate() {
-
             if (navAgent.remainingDistance < 0.7f &&
-                !navAgent.pathPending)
+          !navAgent.pathPending)
             {
                 SetDestination();
             }
-
         }
 
 		//Called when the task is disabled.

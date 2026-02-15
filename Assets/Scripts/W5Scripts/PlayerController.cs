@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
@@ -21,6 +20,8 @@ public class PlayerController : MonoBehaviour
     {
         bool leftMouseClicked = Mouse.current.leftButton.wasPressedThisFrame;
 
+        print(leftMouseClicked);
+
         if(leftMouseClicked)
         {
             Vector3 mousePosition = Mouse.current.position.ReadValue();
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
             //Contain details on whatever it is that we hit with our raycast
             RaycastHit mouseClickHit;
 
-            if(Physics.Raycast(mouseClickRay, out mouseClickHit, 25f, groundLayerMask))
+            if(Physics.Raycast(mouseClickRay, out mouseClickHit, 100f, groundLayerMask))
             {
                 //Player moves to the position of the point that the raycast hit
                 navAgent.SetDestination(mouseClickHit.point);
