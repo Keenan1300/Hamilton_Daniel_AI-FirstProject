@@ -13,6 +13,7 @@ namespace NodeCanvas.Tasks.Actions {
 
         private NavMeshAgent navAgent;
         public BBParameter<Transform> GuardSpot;
+        public BBParameter<Transform> Playerlocation;
         public BBParameter<float> Radius;
         public BBParameter<float> GaurdTime;
         public float waittime;
@@ -63,10 +64,10 @@ namespace NodeCanvas.Tasks.Actions {
         {
             Debug.Log("isguarding");
 
-            if (waittime < 1)
-            {
-                EndAction(true);
-            }
+            Vector3 Playerpos = Playerlocation.value.position;
+            navAgent.SetDestination(Playerpos);
+            navAgent.speed = 0.1f;
+            
 
         }
 
@@ -85,8 +86,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
-			
-		}
+            navAgent.speed = 5f;
+        }
 
 		//Called when the task is paused.
 		protected override void OnPause() {

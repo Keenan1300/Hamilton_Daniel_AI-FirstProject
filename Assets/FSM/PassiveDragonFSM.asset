@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: PassiveDragonFSM
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"GuardSpot":{"_name":"GuardSpot","_targetVariableID":"8a4b8f55-f624-4c4a-ac0f-596268582b8f"},"Playerlocation":{"_name":"Player","_targetVariableID":"6b2456a1-df84-4073-95ab-f1fc7befa440"},"Radius":{"_name":"Radius","_targetVariableID":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f"},"GaurdTime":{"_name":"GuardTime","_targetVariableID":"49e08027-d54c-474a-b0c2-9314d39328bd"},"waittime":3.0,"$type":"NodeCanvas.Tasks.Actions.GuardAT"}]},"_color":{"r":0.3943823,"g":0.5866197,"b":0.7283019,"a":1.0},"_name":"Guard","_position":{"x":605.6,"y":369.6},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"IdleTime":{"_name":"IdleTime","_targetVariableID":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c"},"wanderRadius":30.0,"wandercircledistance":10.0,"$type":"NodeCanvas.Tasks.Actions.RoamAT"}]},"_color":{"r":0.3960784,"g":0.5882353,"b":0.7294118,"a":1.0},"_name":"Roam","_position":{"x":763.2282,"y":644.3364},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"sleepspot":{"_name":"SleepSpot","_targetVariableID":"49e7a4e6-378b-43bc-9779-a84ee1637f0f"},"IdleTime":{"_name":"IdleTime","_targetVariableID":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c"},"Sleepmeter":{"_name":"SleepMeter","_targetVariableID":"58789e06-7fd2-49dc-899b-804e6dca4a60"},"SleepRefillRate":3.7,"$type":"NodeCanvas.Tasks.Actions.SleepAT"}]},"_color":{"r":0.3960784,"g":0.5882353,"b":0.7294118,"a":1.0},"_name":"Sleep","_position":{"x":908.1022,"y":415.1415},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"FatigueRate":{"_name":"FatigueRate","_targetVariableID":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d"},"Fatigue":{"_name":"SleepMeter","_targetVariableID":"58789e06-7fd2-49dc-899b-804e6dca4a60"},"$type":"NodeCanvas.Tasks.Actions.StatUpdateAT"}]},"_position":{"x":868.712,"y":291.3187},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"waitDuration":10.0,"$type":"NodeCanvas.Tasks.Conditions.BehaviourTimeCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"Fatigue":{"_name":"SleepMeter","_targetVariableID":"58789e06-7fd2-49dc-899b-804e6dca4a60"},"FatigueThreshold":{"_name":"FatigueThreshold","_targetVariableID":"23dc6fc1-c90c-460a-8425-2c8094ad1132"},"$type":"NodeCanvas.Tasks.Conditions.TooTiredCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"valueA":{"_name":"SleepMeter","_targetVariableID":"58789e06-7fd2-49dc-899b-804e6dca4a60"},"checkType":3,"valueB":{"_value":99.0},"$type":"NodeCanvas.Tasks.Conditions.CheckFloat"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _objectReferences: []
+  _graphSource:
+    _version: 3.33
+    _category: 
+    _comments: 
+    _translation: {x: -220.64284, y: -39.63556}
+    _zoomFactor: 1
+  _haltSerialization: 0
+  _externalSerializationFile: {fileID: 0}

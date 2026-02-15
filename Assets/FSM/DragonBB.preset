@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DragonBB
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _parentBlackboard
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedBlackboard
+    value: '{"_variables":{"SleepMeter":{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueRate":{"_value":4.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueThreshold":{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GoldPile":{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Radius":{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IdleTime":{"_value":3.0,"_name":"IdleTime","_id":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardTime":{"_value":3.0,"_name":"GuardTime","_id":"49e08027-d54c-474a-b0c2-9314d39328bd","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"PatrolTime":{"_value":3.0,"_name":"PatrolTime","_id":"f7f2c5b6-ae8e-45cc-a312-63f213760df0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FlightSpeed":{"_value":4.0,"_name":"FlightSpeed","_id":"aa464f41-a2c8-43c8-ad51-5fdee9aa64fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardSpot":{"_value":2,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":3,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Player":{"_value":4,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _objectReferences.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_objectReferences.Array.data[0]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_objectReferences.Array.data[1]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_objectReferences.Array.data[2]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_objectReferences.Array.data[3]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_objectReferences.Array.data[4]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.size
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[0]._json
+    value: '{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[0]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[1]._json
+    value: '{"_value":4.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[1]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[2]._json
+    value: '{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[2]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[3]._json
+    value: '{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[3]._references.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[3]._references.Array.data[0]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[3]._references.Array.data[1]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[4]._json
+    value: '{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[4]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[5]._json
+    value: '{"_value":3.0,"_name":"IdleTime","_id":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[5]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[6]._json
+    value: '{"_value":3.0,"_name":"GuardTime","_id":"49e08027-d54c-474a-b0c2-9314d39328bd","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[6]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[7]._json
+    value: '{"_value":3.0,"_name":"PatrolTime","_id":"f7f2c5b6-ae8e-45cc-a312-63f213760df0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[7]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[8]._json
+    value: '{"_value":4.0,"_name":"FlightSpeed","_id":"aa464f41-a2c8-43c8-ad51-5fdee9aa64fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[8]._references.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[9]._json
+    value: '{"_value":1,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[9]._references.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[9]._references.Array.data[0]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[9]._references.Array.data[1]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[10]._json
+    value: '{"_value":1,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[10]._references.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[10]._references.Array.data[0]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[10]._references.Array.data[1]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[11]._json
+    value: '{"_value":1,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _serializedVariables.Array.data[11]._references.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[11]._references.Array.data[0]'
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: '_serializedVariables.Array.data[11]._references.Array.data[1]'
+    value: 
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []

@@ -506,7 +506,7 @@ NavMeshAgent:
   m_Speed: 17.74
   m_Acceleration: 26.6
   avoidancePriority: 50
-  m_AngularSpeed: 100.31
+  m_AngularSpeed: 205.3
   m_StoppingDistance: 1.7
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -539,12 +539,14 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FlightSpeed":{"_value":4.0,"_name":"FlightSpeed","_id":"aa464f41-a2c8-43c8-ad51-5fdee9aa64fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardSpot":{"_value":2,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":3,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Player":{"_value":4,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 2025599772}
   - {fileID: 157683984}
   - {fileID: 818230460}
+  - {fileID: 1256915790}
   _serializedVariables:
   - _json: '{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
@@ -585,6 +587,11 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 818230460}
+  - _json: '{"_value":1,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1256915790}
 --- !u!114 &321786905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,21 +605,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: 
-  _boundGraphObjectReferences: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Passive","_position":{"x":392.8,"y":323.2},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.6606408,"g":0.7433963,"b":0.6946083,"a":1.0},"_name":"Fly","_position":{"x":692.6,"y":481.4001},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":2},"_name":"Hostile","_position":{"x":942.4001,"y":308.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 76f4960f0d7103749a74c3fe6d598285, type: 2}
+  - {fileID: 11400000, guid: d4509f8757db03a42a022286a2671ec6, type: 2}
   _boundGraphSource:
-    _version: 0
+    _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 0, y: 0}
-    _zoomFactor: 1
+    _translation: {x: -127, y: 41}
+    _zoomFactor: 0.5917083
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
   _lockBoundGraphPrefabOverrides: 1
   _preInitializeSubGraphs: 0
   _updateMode: 0
-  _graph: {fileID: 11400000, guid: 76f4960f0d7103749a74c3fe6d598285, type: 2}
+  _graph: {fileID: 0}
   _blackboard: {fileID: 321786904}
 --- !u!4 &321786906
 Transform:
@@ -1590,7 +1600,7 @@ GameObject:
   - component: {fileID: 1256915796}
   - component: {fileID: 1256915797}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
