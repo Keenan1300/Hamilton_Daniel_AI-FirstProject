@@ -28,7 +28,7 @@ namespace NodeCanvas.Tasks.Actions {
 
         //Critical Locations
         public BBParameter<Transform> SleepSpot;
-        public BBParameter<Transform> GoldPile;
+        public BBParameter<Transform> Recon;
         public BBParameter<GameObject> DragonMesh;
 
 
@@ -48,11 +48,13 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-            //Change the material of the selected traffic light
-            int i = PatrolCycle.value;
+            //scrapped for time
 
-            Transform selectedPatrolPoint = PatrolRoutes.value[i];
-            SetDestination(selectedPatrolPoint.position);
+            //Change the material of the selected traffic light
+            //int i = PatrolCycle.value;
+
+            //Transform selectedPatrolPoint = PatrolRoutes.value[i];
+            SetDestination(Recon.value.position);
 
         }
 
@@ -86,7 +88,7 @@ namespace NodeCanvas.Tasks.Actions {
             if (navAgent.remainingDistance < 5f &&
              !navAgent.pathPending)
             {
-                PatrolCycle.value += 1;
+                EndAction(true);
             }
 
         }

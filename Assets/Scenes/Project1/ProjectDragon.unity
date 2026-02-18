@@ -554,6 +554,7 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FireObject":{"_value":17,"_name":"FireObject","_id":"4b6bd200-930f-4820-8555-522adeea65d3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FireSpawnlocation":{"_value":18,"_name":"FireSpawnlocation","_id":"ecf11437-6478-469e-8b9a-b78642e047da","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Recon":{"_value":19,"_name":"Recon","_id":"ef97301b-e9a8-4fcd-91ca-e2f5a4384775","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -575,6 +576,7 @@ MonoBehaviour:
   - {fileID: 1996226366}
   - {fileID: 8058253467253274797, guid: 36ec7ecf9c8daed4a835d587536482bd, type: 3}
   - {fileID: 7144473412201559963}
+  - {fileID: 1257353405}
   _serializedVariables:
   - _json: '{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
@@ -685,6 +687,11 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 7144473412201559963}
+  - _json: '{"_value":1,"_name":"Recon","_id":"ef97301b-e9a8-4fcd-91ca-e2f5a4384775","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1257353405}
 --- !u!114 &321786905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +714,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -194.70647, y: -48.46539}
+    _translation: {x: 142.83144, y: 47.369274}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -1717,6 +1724,37 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &1257353404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257353405}
+  m_Layer: 0
+  m_Name: Recon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1257353405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257353404}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2, y: 3.97, z: 12.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272030111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,3 +5219,4 @@ SceneRoots:
   - {fileID: 1272030112}
   - {fileID: 2124540372}
   - {fileID: 1996226366}
+  - {fileID: 1257353405}
