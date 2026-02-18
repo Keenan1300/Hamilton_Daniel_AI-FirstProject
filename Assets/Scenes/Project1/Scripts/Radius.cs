@@ -1,39 +1,61 @@
+using JetBrains.Annotations;
+using NodeCanvas.Framework;
+using NUnit.Framework;
+using ParadoxNotion.Design;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Radius : MonoBehaviour
 {
-    Color PlayerinRange = Color.red;
-    Color Playerout = Color.white;
+    Color PlayerinRangeColor = Color.red;
+    Color PlayeroutColor = Color.white;
     Color patrol = Color.yellow;
     Color current;
     public LayerMask playerlayer;
-
+    public GameObject Dragon;
+    public GameObject Player;
     public Transform player;
+    private float radius;
+    public Blackboard DragonDetection;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // Access car speed
+        Blackboard DragonDetection = Dragon.GetComponent<Blackboard>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        radius = DragonDetection.GetVariableValue<float>("Radius");
 
         //wherever object is in space, it will do a mathematical scan checking if anything is witihn X units of this objects' space
         Collider[] objectsinrange = Physics.OverlapSphere(transform.position, 20f, playerlayer);
-        foreach (Collider objectinrange in objectsinrange)
+        foreach (Collider PlayerRange in objectsinrange)
         {
 
+            Blackboard PlayerData = PlayerRange.gameObject.GetComponentInParent<Blackboard>();
 
-            DrawCircle(transform.position, 20f, PlayerinRange, 36);
 
+            if (objectsinrange != null)
+            {
+                DrawCircle(transform.position, radius, PlayerinRangeColor, 36);
+
+            }
+            else if (objectsinrange == null) 
+            {
+                DrawCircle(transform.position, radius, PlayeroutColor, 36);
+                Debug.LogError("car is not in range");
+            }
+            
         }
-       
-        DrawCircle(transform.position, 20f, PlayerinRange, 36);
-        
+
+      
+
     }
+
     private void DrawCircle(Vector3 center, float radius, Color colour, int numberOfPoints)
     {
 

@@ -76,7 +76,7 @@ namespace NodeCanvas.Tasks.Actions {
             navAgent.SetDestination(Location);
         }
 
-
+        //using in-class example to help me visualize my functions
         private void VisualizeWander(Vector3 currentCircleCenter, Vector3 currentDestination, float pathUpdateFrequency)
         {
             Debug.DrawLine(agent.transform.position, currentCircleCenter, Color.red, pathUpdateFrequency);

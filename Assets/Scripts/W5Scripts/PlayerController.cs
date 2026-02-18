@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     {
         bool leftMouseClicked = Mouse.current.leftButton.wasPressedThisFrame;
 
-        print(leftMouseClicked);
-
         if(leftMouseClicked)
         {
             Vector3 mousePosition = Mouse.current.position.ReadValue();
