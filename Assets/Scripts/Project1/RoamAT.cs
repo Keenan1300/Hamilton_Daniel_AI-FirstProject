@@ -9,10 +9,21 @@ using Unity.VisualScripting;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class RoamAT : ActionTask {
-
-		public BBParameter<float> IdleTime;
+	public class RoamAT : ActionTask
+    {
+        //Timers and data
+        public BBParameter<float> IdleTime;
+        public BBParameter<float> SleepMeter;
+        public BBParameter<float> Threshold;
+        
+        //nav
         private NavMeshAgent navAgent;
+
+        //Critical Locations
+        public BBParameter<Transform> SleepSpot;
+        public BBParameter<Transform> GoldPile;
+        public BBParameter<GameObject> DragonMesh;
+
 
         //roam example
         public float wanderRadius;
@@ -30,16 +41,16 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-
-            SetDestination();
+            Vector3 DragFly = DragonMesh.value.transform.position;
+            Wander();
         }
 
-        private void SetDestination()
+        private void Wander()
         {
             Vector3 circlecenter = agent.transform.position + agent.transform.forward * wandercircledistance;
             Vector3 randompoint = Random.insideUnitCircle.normalized * wanderRadius;
             Vector3 destination = circlecenter + new Vector3(randompoint.x, agent.transform.position.y, randompoint.y);
-
+            Vector3 DragFly = DragonMesh.value.transform.position;
 
             VisualizeWander(circlecenter, destination, 5f);
 
@@ -49,12 +60,21 @@ namespace NodeCanvas.Tasks.Actions {
             if (NavMesh.SamplePosition(destination, out hit, 10f, NavMesh.AllAreas))
             {
                 navAgent.SetDestination(hit.position);
-
+                DragFly.z = Random.Range(10, 50f);
 
             }
 
         }
 
+        //Function that takes a location an plots it out for the nav system
+        private void SetDestination(Vector3 Location)
+        {
+            //lower dragon to floor
+            Vector3 DragFly = DragonMesh.value.transform.position;
+            DragFly.z = 6f;
+
+            navAgent.SetDestination(Location);
+        }
 
 
         private void VisualizeWander(Vector3 currentCircleCenter, Vector3 currentDestination, float pathUpdateFrequency)
@@ -73,16 +93,34 @@ namespace NodeCanvas.Tasks.Actions {
 
 
         //Called once per frame while the action is active.
-        protected override void OnUpdate() {
+        protected override void OnUpdate()
+        {
+           
+
             if (navAgent.remainingDistance < 0.7f &&
           !navAgent.pathPending)
             {
-                SetDestination();
+                Wander();
             }
+
+
+            //If dragon gets tired, then go to sleep spot. This will indicate end of roam.
+            if (SleepMeter.value < Threshold.value)
+            {
+                SetDestination(SleepSpot.value.position);
+
+                if (navAgent.remainingDistance < 2f && !navAgent.pathPending)
+                {
+                    EndAction();
+                }
+
+              
+            }
+
         }
 
-		//Called when the task is disabled.
-		protected override void OnStop() {
+        //Called when the task is disabled.
+        protected override void OnStop() {
 			
 		}
 

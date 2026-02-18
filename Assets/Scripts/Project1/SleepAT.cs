@@ -5,6 +5,8 @@ using UnityEngine.AI;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
 using Unity.VisualScripting;
+using UnityEngine.Animations;
+using UnityEngine.Playables;
 
 namespace NodeCanvas.Tasks.Actions {
 
@@ -13,9 +15,10 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<Transform> sleepspot;
         public BBParameter<float> IdleTime;
         public BBParameter<float> Sleepmeter;
+        public BBParameter<AnimationClip> Sleep;
         public float SleepRefillRate;
         private NavMeshAgent navAgent;
-
+        public BBParameter<Animation> anim;
 
 
 
@@ -24,6 +27,7 @@ namespace NodeCanvas.Tasks.Actions {
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
             navAgent = agent.GetComponent<NavMeshAgent>();
+            anim = agent.GetComponent<Animation>();
             return null;
 		}
 
@@ -31,18 +35,9 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-            SetDestination();
+          
         }
 
-
-        private void SetDestination()
-        {
-   
-            Vector3 Sleeppoint = sleepspot.value.position;
-            
-            navAgent.SetDestination(Sleeppoint);
-            
-        }
 
 
         //Called once per frame while the action is active.
@@ -51,8 +46,7 @@ namespace NodeCanvas.Tasks.Actions {
             if (navAgent.remainingDistance < 0.7f &&
              !navAgent.pathPending)
             {
-                SetDestination();
-                Sleepmeter.value += SleepRefillRate;
+                Sleepmeter.value += SleepRefillRate * Time.deltaTime;
 
             }
 

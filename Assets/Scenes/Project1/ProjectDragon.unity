@@ -529,7 +529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"SleepMeter":{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueRate":{"_value":4.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueRate":{"_value":3.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueThreshold":{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GoldPile":{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Radius":{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -540,6 +540,10 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardSpot":{"_value":2,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":3,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Player":{"_value":4,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DragonAnimator":{"_value":5,"_name":"DragonAnimator","_id":"d3a22bc2-04bb-4d13-9ac5-0f94549096cf","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Flying":{"_value":6,"_name":"Flying","_id":"c916974e-c846-40f6-ad20-4982aad92b90","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AnimationClip,
+    UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Sleep":{"_value":7,"_name":"Sleep","_id":"88dee221-63de-40e5-8cd8-38aee381a8b8","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AnimationClip,
+    UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MasterDragonObj":{"_value":8,"_name":"MasterDragonObj","_id":"a1a88e9a-465a-4d50-8cb6-1a82275c6913","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -547,11 +551,15 @@ MonoBehaviour:
   - {fileID: 157683984}
   - {fileID: 818230460}
   - {fileID: 1256915790}
+  - {fileID: 8511138774359139392}
+  - {fileID: -4506558747437489242, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
+  - {fileID: 5754330143168782828, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
+  - {fileID: 321786902}
   _serializedVariables:
   - _json: '{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":4.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":3.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -592,6 +600,26 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1256915790}
+  - _json: '{"_value":1,"_name":"DragonAnimator","_id":"d3a22bc2-04bb-4d13-9ac5-0f94549096cf","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 8511138774359139392}
+  - _json: '{"_value":1,"_name":"Flying","_id":"c916974e-c846-40f6-ad20-4982aad92b90","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AnimationClip,
+      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: -4506558747437489242, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
+  - _json: '{"_value":1,"_name":"Sleep","_id":"88dee221-63de-40e5-8cd8-38aee381a8b8","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AnimationClip,
+      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 5754330143168782828, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
+  - _json: '{"_value":1,"_name":"MasterDragonObj","_id":"a1a88e9a-465a-4d50-8cb6-1a82275c6913","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 321786902}
 --- !u!114 &321786905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,7 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Passive","_position":{"x":392.8,"y":323.2},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.6606408,"g":0.7433963,"b":0.6946083,"a":1.0},"_name":"Fly","_position":{"x":692.6,"y":481.4001},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":2},"_name":"Hostile","_position":{"x":942.4001,"y":308.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Passive","_position":{"x":391.8,"y":323.2},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":0.6606408,"g":0.7433963,"b":0.6946083,"a":1.0},"_name":"Fly","_position":{"x":692.6,"y":481.4001},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":2},"_name":"Hostile","_position":{"x":942.4001,"y":308.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 76f4960f0d7103749a74c3fe6d598285, type: 2}
@@ -614,8 +642,8 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -143.06229, y: -2.0244553}
-    _zoomFactor: 0.5896944
+    _translation: {x: -194.70647, y: -48.46539}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -636,7 +664,8 @@ Transform:
   m_LocalPosition: {x: -27.21, y: 6.02, z: 12.801525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 9031532768119144186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &323889892
@@ -4366,7 +4395,7 @@ Animation:
   m_GameObject: {fileID: 8511138774359139392}
   m_Enabled: 1
   serializedVersion: 4
-  m_Animation: {fileID: 5754330143168782828, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
+  m_Animation: {fileID: -4506558747437489242, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
   m_Animations:
   - {fileID: -3100369314251171874, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
   - {fileID: -4506558747437489242, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
@@ -4724,6 +4753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9031532768119144186}
   - component: {fileID: 7207798939119577652}
+  - component: {fileID: 9031532768119144187}
   m_Layer: 0
   m_Name: Dragonv3
   m_TagString: Untagged
@@ -4870,14 +4900,36 @@ Transform:
   m_GameObject: {fileID: 8511138774359139392}
   serializedVersion: 2
   m_LocalRotation: {x: 0.024438646, y: 0.70668334, z: -0.024438716, w: 0.7066854}
-  m_LocalPosition: {x: -27.4, y: 0.68, z: 11.74}
+  m_LocalPosition: {x: -0.19000053, y: -5.34, z: -1.0615253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 136979775894941284}
   - {fileID: 2803068301644710688}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 321786906}
   m_LocalEulerAnglesHint: {x: 3.961, y: 90, z: 0}
+--- !u!95 &9031532768119144187
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8511138774359139392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfa25222a6859de4899ffc4b175c415e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9065834636462914482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,4 +5007,3 @@ SceneRoots:
   - {fileID: 1203017109}
   - {fileID: 157683984}
   - {fileID: 818230460}
-  - {fileID: 9031532768119144186}
