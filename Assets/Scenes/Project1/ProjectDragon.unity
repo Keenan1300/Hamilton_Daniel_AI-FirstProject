@@ -531,14 +531,14 @@ MonoBehaviour:
   _serializedBlackboard: '{"_variables":{"SleepMeter":{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueRate":{"_value":3.0,"_name":"FatigueRate","_id":"dcf014fa-138d-4f20-b41e-6980bfd0ca2d","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FatigueThreshold":{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GoldPile":{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Radius":{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Radius":{"_value":15.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"IdleTime":{"_value":3.0,"_name":"IdleTime","_id":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardTime":{"_value":3.0,"_name":"GuardTime","_id":"49e08027-d54c-474a-b0c2-9314d39328bd","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"PatrolTime":{"_value":3.0,"_name":"PatrolTime","_id":"f7f2c5b6-ae8e-45cc-a312-63f213760df0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FlightSpeed":{"_value":4.0,"_name":"FlightSpeed","_id":"aa464f41-a2c8-43c8-ad51-5fdee9aa64fa","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardSpot":{"_value":2,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":3,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"GuardSpot":{"_value":1,"_name":"GuardSpot","_id":"8a4b8f55-f624-4c4a-ac0f-596268582b8f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":2,"_name":"SleepSpot","_id":"49e7a4e6-378b-43bc-9779-a84ee1637f0f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"GoldPile":{"_value":3,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"MasterDragonObj":{"_value":4,"_name":"MasterDragonObj","_id":"a1a88e9a-465a-4d50-8cb6-1a82275c6913","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepStone":{"_value":5,"_name":"SleepStone","_id":"30734509-88cb-4eb8-94ca-9b6d9bddeb44","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Player":{"_value":6,"_name":"Player","_id":"6b2456a1-df84-4073-95ab-f1fc7befa440","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
@@ -550,12 +550,16 @@ MonoBehaviour:
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepStoneDormant":{"_value":12,"_name":"SleepStoneDormant","_id":"6cd5b0aa-2d6b-49f2-a17b-fe4e2d4487db","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Material,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"PlayerLayer":{"_value":{"value":512},"_name":"PlayerLayer","_id":"39763c36-9419-4252-b132-ce5c77f1cfd0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.LayerMask,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"OntopOfPlayer":{"_name":"OntopOfPlayer","_id":"b4507edb-8574-4504-840a-1e67cdbdf301","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Patrollocations":{"_value":[13,14,15,16],"_name":"Patrollocations","_id":"6b9a02bb-1d7b-451b-bef1-6c921a88dcab","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FireObject":{"_value":17,"_name":"FireObject","_id":"4b6bd200-930f-4820-8555-522adeea65d3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FireSpawnlocation":{"_value":18,"_name":"FireSpawnlocation","_id":"ecf11437-6478-469e-8b9a-b78642e047da","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
-  - {fileID: 2025599772}
   - {fileID: 157683984}
   - {fileID: 818230460}
+  - {fileID: 2025599772}
   - {fileID: 321786902}
   - {fileID: 919132147500856122}
   - {fileID: 1256915790}
@@ -565,6 +569,12 @@ MonoBehaviour:
   - {fileID: 5754330143168782828, guid: d5a7adc3c30a3154e80a1c1894ae2a24, type: 3}
   - {fileID: 2100000, guid: b88011f8682797840b1392b46b34eb29, type: 2}
   - {fileID: 2100000, guid: c0d5cdd67c92a6f4fb1ad25c72995b2b, type: 2}
+  - {fileID: 1577744352}
+  - {fileID: 1272030112}
+  - {fileID: 2124540372}
+  - {fileID: 1996226366}
+  - {fileID: 8058253467253274797, guid: 36ec7ecf9c8daed4a835d587536482bd, type: 3}
+  - {fileID: 7144473412201559963}
   _serializedVariables:
   - _json: '{"_value":100.0,"_name":"SleepMeter","_id":"58789e06-7fd2-49dc-899b-804e6dca4a60","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
@@ -575,12 +585,7 @@ MonoBehaviour:
   - _json: '{"_value":50.0,"_name":"FatigueThreshold","_id":"23dc6fc1-c90c-460a-8425-2c8094ad1132","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
-    _references:
-    - {fileID: 0}
-    - {fileID: 2025599772}
-  - _json: '{"_value":10.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":15.0,"_name":"Radius","_id":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":3.0,"_name":"IdleTime","_id":"1b4a1d80-167d-47ef-a932-d6bb9efaab2c","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -605,6 +610,11 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 818230460}
+  - _json: '{"_value":1,"_name":"GoldPile","_id":"08eb7517-6d89-411d-be49-075b2d846697","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 2025599772}
   - _json: '{"_value":1,"_name":"MasterDragonObj","_id":"a1a88e9a-465a-4d50-8cb6-1a82275c6913","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references:
@@ -656,6 +666,25 @@ MonoBehaviour:
   - _json: '{"_name":"OntopOfPlayer","_id":"b4507edb-8574-4504-840a-1e67cdbdf301","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
+  - _json: '{"_value":[1,2,3,4],"_name":"Patrollocations","_id":"6b9a02bb-1d7b-451b-bef1-6c921a88dcab","$type":"NodeCanvas.Framework.Variable`1[[System.Collections.Generic.List`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1577744352}
+    - {fileID: 1272030112}
+    - {fileID: 2124540372}
+    - {fileID: 1996226366}
+  - _json: '{"_value":1,"_name":"FireObject","_id":"4b6bd200-930f-4820-8555-522adeea65d3","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 8058253467253274797, guid: 36ec7ecf9c8daed4a835d587536482bd, type: 3}
+  - _json: '{"_value":1,"_name":"FireSpawnlocation","_id":"ecf11437-6478-469e-8b9a-b78642e047da","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 7144473412201559963}
 --- !u!114 &321786905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Passive","_position":{"x":390.8,"y":327.2},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Hostile","_position":{"x":942.4001,"y":308.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"}],"connections":[{"_condition":{"GoldPile":{"_name":"GoldPile","_targetVariableID":"08eb7517-6d89-411d-be49-075b2d846697"},"Radius":{"_name":"Radius","_targetVariableID":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f"},"Player":{"_name":"PlayerLayer","_targetVariableID":"39763c36-9419-4252-b132-ce5c77f1cfd0"},"$type":"NodeCanvas.Tasks.Conditions.RadiusTripCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"GoldPile":{"_name":"GoldPile","_targetVariableID":"08eb7517-6d89-411d-be49-075b2d846697"},"Radius":{"_name":"Radius","_targetVariableID":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f"},"Player":{"_value":{"value":512}},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.RadiusTripCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Passive","_position":{"x":390.8,"y":327.2},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Hostile","_position":{"x":942.4001,"y":308.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"}],"connections":[{"_condition":{"GoldPile":{"_name":"GoldPile","_targetVariableID":"08eb7517-6d89-411d-be49-075b2d846697"},"Radius":{"_name":"Radius","_targetVariableID":"b4e98ceb-9abb-4837-bc2e-b5e77cdb6b0f"},"Player":{"_name":"PlayerLayer","_targetVariableID":"39763c36-9419-4252-b132-ce5c77f1cfd0"},"$type":"NodeCanvas.Tasks.Conditions.RadiusTripCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 76f4960f0d7103749a74c3fe6d598285, type: 2}
@@ -1688,6 +1717,37 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &1272030111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272030112}
+  m_Layer: 0
+  m_Name: PatrolSpot2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1272030112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272030111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.7, y: 19.869999, z: 9.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283368113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1964,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300650761}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1577744351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577744352}
+  m_Layer: 0
+  m_Name: PatrolSpot1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1577744352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577744351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.8, y: 13.44, z: -1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808702426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,7 +2449,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   Dragon: {fileID: 321786902}
-  Player: {fileID: 0}
+  Player: {fileID: 1256915790}
   player: {fileID: 1256915795}
   DragonDetection: {fileID: 321786904}
 --- !u!4 &1927153064
@@ -2371,6 +2462,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 11.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1996226365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996226366}
+  m_Layer: 0
+  m_Name: PatrolSpot4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996226366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996226365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.12, y: 13.44, z: -23.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2529,6 +2651,37 @@ Transform:
   - {fileID: 363488190}
   - {fileID: 651636272}
   m_Father: {fileID: 1203017109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124540371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124540372}
+  m_Layer: 0
+  m_Name: PatrolSpot3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124540372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124540371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.12, y: 13.44, z: 26.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &136979775894941284
 Transform:
@@ -4380,13 +4533,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5565636472817765531}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.01076712, z: 0}
+  m_LocalRotation: {x: 0.000000013999397, y: 0.000000065098064, z: -0.01124039, w: 0.9999369}
+  m_LocalPosition: {x: -0.0000008023344, y: 0.010767908, z: -0.0000000061339303}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8909676356669377739}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.288}
 --- !u!4 &7179300521076557855
 Transform:
   m_ObjectHideFlags: 0
@@ -5024,3 +5177,7 @@ SceneRoots:
   - {fileID: 157683984}
   - {fileID: 818230460}
   - {fileID: 543450652041177472}
+  - {fileID: 1577744352}
+  - {fileID: 1272030112}
+  - {fileID: 2124540372}
+  - {fileID: 1996226366}

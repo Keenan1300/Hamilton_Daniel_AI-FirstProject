@@ -11,7 +11,7 @@ namespace NodeCanvas.Tasks.Conditions {
         public BBParameter<GameObject> GoldPile;
         public BBParameter<float> Radius;
         public BBParameter<LayerMask> Player;
-
+        private Blackboard playerblackboard;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -47,13 +47,14 @@ namespace NodeCanvas.Tasks.Conditions {
 
                 if (playerblackboard == null)
                 {
-                    Debug.LogError("car is not in range");
+                  
                     return playerblackboard;
                 }
 
             }
 
-            return playerinrange != null;
+            //When right mouse button click, aggressive mode.
+            return Input.GetMouseButton(1);
         }
 	}
 }
